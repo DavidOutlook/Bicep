@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.4.1124.51302",
+      "templateHash": "13464038540213485644"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Web/serverfarms",
+      "apiVersion": "2021-02-01",
+      "name": "appPlan",
+      "location": "[resourceGroup().location]",
+      "kind": "linux",
+      "sku": {
+        "name": "B1"
+      },
+      "properties": {
+        "reserved": true
+      }
+    }
+  ]
+}
